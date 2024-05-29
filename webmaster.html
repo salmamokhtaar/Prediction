@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-xl">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold text-black">Liver Disease</div>
+            <ul class="hidden md:flex space-x-6 text-black">
+                <li><a href="#home" class="hover:text-black">Home</a></li>
+                <li><a href="#about" class="hover:text-black">About us</a></li>
+                <li><a href="#form-section" class="hover:text-gray-800">Prediction</a></li>
+            </ul>
+            <div class="md:hidden">
+                <button id="menuButton" class="text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden">
+            <ul class="flex flex-col space-y-4 text-gray-600 p-4">
+                <li><a href="#home" class="hover:text-gray-800">Home</a></li>
+                <li><a href="#about" class="hover:text-gray-800">About us</a></li>
+                <li><a href="#form-section" class="hover:text-gray-800">Prediction</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="home" class="container bg-gray-400 mx-auto px-6 py-16 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Advice, Treatment, Help</h1>
+        <p class="text-gray-600 mb-8">Liver disease is a significant health issue affecting<br> millions of people globally.</p>
+        <button class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+            <a href="#form-section">Fadlan buuxi Formka</a>
+        </button>
+    </div>
+
+    <!-- form -->
+    <div id="form-section" class="max-w-2xl mx-auto p-6 bg-white rounded shadow-lg mt-10">
+        <h1 class="text-2xl font-bold mb-4">Liver Disease Prediction Form</h1>
+        <form>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="mb-4">
+                    <label for="full_name" class="block text-sm font-medium text-gray-700">FullName</label>
+                    <input type="text" id="full_name" name="full_name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                </div>
+                <div class="mb-4">
+                    <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+                    <input type="text" id="address" name="address" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                </div>
+                <div class="mb-4">
+                    <label for="age" class="block text-sm font-medium text-gray-700">Age</label>
+                    <input type="text" id="age" name="age" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                </div>
+                <div class="mb-4">
+                    <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+                    <select id="gender" name="gender" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="total_billirubin" class="block text-sm font-medium text-gray-700">Total Billirubin</label>
+                    <input type="text" id="total_billirubin" name="total_billirubin" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                </div>
+                <div class="mb-4">
+                    <label for="drect_billirubin" class="block text-sm font-medium text-gray-700">Direct Bilirubin</label>
+                    <input type="text" id="drect_billirubin" name="drect_billirubin" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                </div>
+                <div class="mb-4">
+                    <label for="alkaline_phosphotase" class="block text-sm font-medium text-gray-700">Alkaline Phosphotase</label>
+                    <input type="text" id="alkaline_phosphotase" name="alkaline_phosphotase" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                </div>
+                <div class="mb-4">
+                    <label for="alamine_aminotransferase" class="block text-sm font-medium text-gray-700">Alamine Aminotransferase</label>
+                    <input type="text" id="alamine_aminotransferase" name="alamine_aminotransferase" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                </div>
+                <div class="mb-4">
+                    <label for="aspartate_aminotransferase" class="block text-sm font-medium text-gray-700">Aspartate Aminotransferase</label>
+                    <input type="text" id="aspartate_aminotransferase" name="aspartate_aminotransferase" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                </div>
+                <div class="mb-4">
+                    <label for="total_protiens" class="block text-sm font-medium text-gray-700">Total Proteins</label>
+                    <input type="text" id="total_protiens" name="total_protiens" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                </div>
+                <div class="mb-4">
+                    <label for="albumin" class="block text-sm font-medium text-gray-700">Albumin</label>
+                    <input type="text" id="albumin" name="albumin" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                </div>
+                <div class="mb-4">
+                    <label for="albumin_and_globulin_ratio" class="block text-sm font-medium text-gray-700">Albumin and Globulin Ratio</label>
+                    <input type="text" id="albumin_and_globulin_ratio" name="albumin_and_globulin_ratio" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="w-full px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- about us -->
+    <div id="about" class="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
+        <div class="flex flex-col lg:flex-row justify-between gap-8">
+            <div class="w-full lg:w-5/12 flex flex-col justify-center">
+                <h1 class="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 dark:text-white pb-4">About Us</h1>
+                <p class="font-normal text-base leading-6 text-gray-600 dark:text-white">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire, and her liberties inviolate; and we will that it be thus observed; which is apparent from</p>
+            </div>
+            <div class="w-full lg:w-5/12">
+                <img class="w-full h-full" src="https://i.ibb.co/FhgPJt8/Rectangle-116.png" alt="A group of People" />
+            </div>
+        </div>
+    </div>
+    <footer class="bg-gray-800 py-6 mt-20">
+        <div class="container mx-auto text-center text-white">
+            <p>&copy; 2024 Liver Disease Prediction. All Rights Reserved.</p>
+            <div class="flex justify-center mt-4">
+                <a href="#" class="mx-2 hover:text-gray-400"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="mx-2 hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="mx-2 hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        // JavaScript to toggle the mobile menu
+        document.getElementById('menuButton').addEventListener('click', function() {
+            var mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
